@@ -6,7 +6,7 @@
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:01:01 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/04/24 20:28:22 by jmorneau         ###   ########.fr       */
+/*   Updated: 2023/04/24 21:02:34 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ public:
 	vector2df &operator=(const vector2df& cpy);
 	vector2df operator+(const vector2df& other) const;
 	vector2df operator-(const vector2df& other) const;
+	
+	vector2df operator+=(const vector2df& cpy);
+	vector2df operator-=(const vector2df& cpy);
 	
 	vector2df operator*(const double scalar) const;
 	vector2df operator/(const double scalar) const;

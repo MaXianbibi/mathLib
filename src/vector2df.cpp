@@ -6,7 +6,7 @@
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:02:37 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/04/24 20:28:59 by jmorneau         ###   ########.fr       */
+/*   Updated: 2023/04/24 21:02:51 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,18 @@ double vector2df::cross(const vector2df& other) const
 {
         return (x * other.y - y * other.x);
 }
+
+vector2df vector2df::operator+=(const vector2df& cpy)
+{
+	return (*this + cpy);
+}
+
+vector2df vector2df::operator-=(const vector2df& cpy)
+{
+	return (*this - cpy);
+}
+
+
 
 double vector2df::distance(const vector2df& other) const
 {
