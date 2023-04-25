@@ -6,7 +6,7 @@
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 18:24:43 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/04/23 18:25:46 by jmorneau         ###   ########.fr       */
+/*   Updated: 2023/04/24 20:10:32 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,8 @@
 
 #include <cmath>
 
-class mathLib
-{
-private:
-	
-public:
-	mathLib();
-	~mathLib();
-};
-
-
+#include "vector2df.hpp"
+#include "vector2di.hpp"
+#include "polarCord.hpp"
 
 #endif

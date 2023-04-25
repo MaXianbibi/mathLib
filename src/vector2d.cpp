@@ -6,7 +6,7 @@
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 18:35:08 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/04/24 19:53:59 by jmorneau         ###   ########.fr       */
+/*   Updated: 2023/04/24 20:35:49 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ vector2di::vector2di(int32_t _x, int32_t _y) : x(_x), y(_y) {}
 
 vector2di::~vector2di() {}
 
-vector2di vector2di::operator=(const vector2di& other) const
+vector2di &vector2di::operator=(const vector2di& other)
 {
-	return (vector2di(this->x, this->y));	
+	this->x = other.x;
+	this->y = other.y;
+
+	return (*this);
 }
 
 vector2di::vector2di(vector2di &cpy)

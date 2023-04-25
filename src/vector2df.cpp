@@ -6,7 +6,7 @@
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:02:37 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/04/24 20:03:14 by jmorneau         ###   ########.fr       */
+/*   Updated: 2023/04/24 20:28:59 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ vector2df::vector2df(double _x, double _y) : x(_x), y(_y) {}
 
 vector2df::~vector2df() {}
 
-vector2df vector2df::operator=(const vector2df& other) const
+vector2df &vector2df::operator=(const vector2df& other)
 {
-	return (vector2df(this->x, this->y));	
+	this->x = other.x;
+	this->y = other.y;
+
+	return (*this);
 }
 
 vector2df::vector2df(vector2df &cpy)

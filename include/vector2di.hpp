@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector2d.hpp                                       :+:      :+:    :+:   */
+/*   vector2di.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 18:34:32 by jmorneau          #+#    #+#             */
-/*   Updated: 2023/04/24 19:53:49 by jmorneau         ###   ########.fr       */
+/*   Updated: 2023/04/24 20:35:28 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VECTOR2D_HPP
-#define VECTOR2D_HPP
+#ifndef VECTOR2DI_HPP
+#define VECTOR2DI_HPP
 
 #include <cmath>
 #include <iostream>
@@ -28,8 +28,8 @@ public:
 	vector2di(vector2di &cpy);
 
 
+	vector2di &operator=(const vector2di& cpy);
 
-	vector2di operator=(const vector2di& cpy) const;
 	vector2di operator+(const vector2di& other) const;
 	vector2di operator-(const vector2di& other) const;
 	
@@ -41,7 +41,7 @@ public:
 	double distance(const vector2di& other) const;
 };
 
-std::ostream& operator<<(std::ostream& os, const vector2di& v)
+inline std::ostream& operator<<(std::ostream& os, const vector2di& v)
 {
     os << "(" << v.x << ", " << v.y << ")";
     return os;
